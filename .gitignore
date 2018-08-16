@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+
+# Garbage
+*.log
+*~
+*#
+.DS_Store
+.nyc_output
+
+# IDE stuff
+.netbeans
+nbproject
+.idea
+.node_history
+*.sublime-*
+*.atom-*
+.vscode
+.tern-*
+.languagebabel
+jsconfig.json
