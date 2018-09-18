@@ -19,3 +19,6 @@ nbproject
 .tern-*
 .languagebabel
 jsconfig.json
+
+# Local configuration
+.env
