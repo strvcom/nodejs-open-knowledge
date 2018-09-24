@@ -29,6 +29,7 @@
     "pino-pretty": "^2.0.1"
   },
   "dependencies": {
+    "jsonschema": "^1.2.4",
     "kcors": "^2.2.2",
     "koa": "^2.5.2",
     "koa-body": "^4.0.4",
