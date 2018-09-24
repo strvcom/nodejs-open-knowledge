@@ -24,4 +24,10 @@ router.get('/dogs/:id', ctx => {
   ctx.body = dog
 })
 
+router.post('/dogs', ctx => {
+  dogs.push(ctx.request.body)
+
+  ctx.body = dogs
+})
+
 module.exports = router.routes()
