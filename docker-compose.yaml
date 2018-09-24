@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+
+  database:
+    image: sameersbn/postgresql:latest
+    container_name: nodejs-nights-db
+    environment:
+      - DB_NAME=nodejs-nights-local
+      - PG_TRUST_LOCALNET=true
+    ports:
+      - "5432:5432"
