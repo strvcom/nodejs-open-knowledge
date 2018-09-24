@@ -1,12 +1,9 @@
 'use strict'
 
-const development = {
-  client: 'pg',
-  connection: 'postgres://postgres@localhost:5432/nodejs-nights-local',
-  pool: {
-    min: 0,
-    max: 5,
-  },
+const _ = require('lodash')
+const config = require('../config')
+
+const staticDatabaseConfig = {
   migrations: {
     directory: './migrations',
   },
@@ -15,6 +12,8 @@ const development = {
   },
 }
 
+const databaseConfig = _.merge(config.database, staticDatabaseConfig)
+
 module.exports = {
-  development,
+  [config.env]: databaseConfig,
 }
