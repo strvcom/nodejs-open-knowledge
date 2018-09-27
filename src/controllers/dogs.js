@@ -1,50 +1,30 @@
 'use strict'
 
-const GetAllDogs = require('./../operations/dogs/GetAll')
-const GetDogById = require('./../operations/dogs/GetById')
+const { validate } = require('./../validators')
+const operations = require('./../operations/dogs')
+const schemas = require('./../validators/schemas/dogs')
 
 async function getAll(ctx) {
-  ctx.body = await new GetAllDogs().execute({})
+  ctx.body = await operations.getAll()
 }
 
 async function getById(ctx) {
-  ctx.body = await new GetDogById().execute({
+  const input = {
     id: parseInt(ctx.params.id),
-  })
+  }
+  validate(schemas.dogId, input)
+  ctx.body = await operations.getById(input)
 }
 
 async function addDog(ctx) {
-  const schema = {
-    type: 'Object',
-    required: true,
-    properties: {
-      id: {
-        type: 'integer',
-        required: true,
-      },
-      name: {
-        type: 'string',
-        required: true,
-      },
-      breed: {
-        type: 'string',
-        required: true,
-      },
-      birthYear: {
-        type: 'number',
-      },
-      photo: {
-        type: 'string',
-        format: 'url',
-      },
-    },
+  const input = {
+    name: ctx.params.name,
+    breed: ctx.params.breed,
+    birthYear: parseInt(ctx.params.birthYear),
+    photo: ctx.params.photo,
   }
-
-  // const validation = validate(ctx.request.body, schema)
-
-  // dogs.push(ctx.request.body)
-
-  // ctx.body = dogs
+  validate(schemas.dog, input)
+  ctx.body = await operations.addDog(input)
 }
 
 module.exports = {

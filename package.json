@@ -26,19 +26,19 @@
     "@strv/eslint-config-javascript": "^8.3.0",
     "eslint": "^5.6.0",
     "nodemon": "^1.18.4",
-    "pino-pretty": "^2.2.0"
+    "pino-pretty": "^2.2.1"
   },
   "dependencies": {
+    "bcrypt": "^3.0.1",
     "dotenv": "^6.0.0",
     "jsonschema": "^1.2.4",
+    "jsonwebtoken": "^8.3.0",
     "kcors": "^2.2.2",
     "koa": "^2.5.3",
     "koa-body": "^4.0.4",
     "koa-compress": "^3.0.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.11",
-    "pino": "^5.5.0",
-    "shortid": "^2.2.13",
-    "traverse": "^0.6.6"
+    "pino": "^5.6.2"
   }
 }

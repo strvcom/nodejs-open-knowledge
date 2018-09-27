@@ -20,12 +20,17 @@ async function handleErrors(ctx, next) {
     ctx.body = {
       type: responseError.type,
       message: responseError.message,
-      stack: isDevelopment && responseError.stack, // eslint-disable-line no-undefined, max-len
+      stack: isDevelopment && responseError.stack,
     }
     return true
   }
 }
 
+function handleNotFound() {
+  throw new appErrors.NotFoundError()
+}
+
 module.exports = {
   handleErrors,
+  handleNotFound,
 }

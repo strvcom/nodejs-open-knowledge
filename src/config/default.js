@@ -29,6 +29,25 @@ module.exports = env => ({
       maxAge: 3600,
     },
   },
+  auth: {
+    secret: process.env.AUTH_SECRET
+      || 'nc475yb9cb*)&n4fy0bt9vwcfnhuwhbv8hf9docgaewu348y983fsdhfelhf',
+    saltRounds: 10,
+    createOptions: {
+      // 1 hour
+      expiresIn: 60 * 60,
+      algorithm: 'HS256',
+      issuer: `com.strv.nodejs-nights.${env}`,
+    },
+    verifyOptions: {
+      algorithm: 'HS256',
+      issuer: `com.strv.nodejs-nights.${env}`,
+    },
+    jwt: {
+      expiration: 60 * 60,
+      idleTimeoutSec: 60 * 60,
+    },
+  },
   logger: {
     stdout: true,
     minLevel: 'debug',

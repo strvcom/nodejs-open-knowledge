@@ -16,7 +16,14 @@ function findById(id) {
   return dog
 }
 
+function create(dog) {
+  dog.id = dogs.length + 1
+  dogs.push(dog)
+  return dog
+}
+
 module.exports = {
   findAll,
   findById,
+  create,
 }

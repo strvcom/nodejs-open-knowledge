@@ -1,0 +1,16 @@
+[
+  {
+    "userId": 1,
+    "token": "co8b34gchvcihu34c4hbivquchboihbiycqpi4grchfibhrwipciu3y4ivbciwhuqfi4oybuq",
+    "issuedAt": "2018-10-01T10:30:00.000Z",
+    "expiresAt": "2018-10-01T11:12:37.894Z",
+    "lastActivityAt": "2018-10-01T12:30:00.000Z"
+  },
+  {
+    "userId": 2,
+    "token": "5co8b34gchvcihu34c4hbivquchboihbiycqpi4grchfibhrwipcsdfgiu3y4ivbciwhuqfi4oybuq",
+    "issuedAt": "2018-10-01T08:30:00.000Z",
+    "expiresAt": "2018-10-01T09:12:37.894Z",
+    "lastActivityAt": "2018-10-01T10:30:00.000Z"
+  }
+]
