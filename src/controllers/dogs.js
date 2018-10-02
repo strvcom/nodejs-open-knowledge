@@ -18,10 +18,10 @@ async function getById(ctx) {
 
 async function addDog(ctx) {
   const input = {
-    name: ctx.params.name,
-    breed: ctx.params.breed,
-    birthYear: parseInt(ctx.params.birthYear),
-    photo: ctx.params.photo,
+    name: ctx.request.body.name,
+    breed: ctx.request.body.breed,
+    birthYear: parseInt(ctx.request.body.birthYear),
+    photo: ctx.request.body.photo,
   }
   validate(schemas.dog, input)
   ctx.body = await operations.addDog(input)

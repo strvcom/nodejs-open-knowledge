@@ -24,7 +24,7 @@
   "homepage": "https://github.com/strvcom/nodejs-nights-v2#readme",
   "devDependencies": {
     "@strv/eslint-config-javascript": "^8.3.0",
-    "eslint": "^5.6.0",
+    "eslint": "^5.6.1",
     "nodemon": "^1.18.4",
     "pino-pretty": "^2.2.1"
   },
