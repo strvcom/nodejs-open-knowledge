@@ -9,7 +9,7 @@ if (env === 'local') {
   require('dotenv').config({ silent: false })
 }
 
-const _ = require('lodash')
+const R = require('ramda')
 
 // We need dynamic requires here to ensure that .env is loaded beforehand
 const envConfigPath = `./env/${env}`
@@ -17,6 +17,6 @@ const envConfig = require(envConfigPath)
 const defaultConfig = require('./default')(env)
 
 // Override default values with values from environment config
-const resultConfig = _.merge({}, defaultConfig, envConfig)
+const resultConfig = R.mergeDeepRight(defaultConfig, envConfig)
 
 module.exports = resultConfig

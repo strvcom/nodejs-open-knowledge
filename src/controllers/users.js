@@ -1,8 +1,8 @@
 'use strict'
 
-const { validate } = require('./../validators')
+const { validate } = require('./../validations')
 const operations = require('./../operations/users')
-const schemas = require('./../validators/schemas/users')
+const schemas = require('./../validations/schemas/users')
 
 async function login(ctx) {
   const input = {

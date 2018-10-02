@@ -1,15 +1,12 @@
 'use strict'
 
-const configIdleTimeoutSec = require('./../config').auth.jwt.idleTimeoutSec
 const errors = require('./../utils/errors')
 const logger = require('./../utils/logger')
 const crypto = require('./../utils/crypto')
 const userRepository = require('./../repositories/users')
 
-const CONFIG_IDLE_TIMEOUT_MS = configIdleTimeoutSec * 1000
-
 async function verifyTokenPayload(input) {
-  logger.info(`verifyTokenPayload start: ${JSON.stringify(input)}`)
+  logger.info({ input }, 'verifyTokenPayload start')
   const jwtPayload = crypto.verifyAccessToken(input.jwtToken)
   const now = Date.now()
   if (!jwtPayload || !jwtPayload.exp || now >= jwtPayload.exp * 1000) {
@@ -17,38 +14,19 @@ async function verifyTokenPayload(input) {
   }
 
   const userId = Number(jwtPayload.userId)
-  const user = await userRepository.findByIdAndAccessToken(userId, input.jwtToken)
-  if (!user || !user.accessToken) {
+  const user = await userRepository.findById(userId)
+  if (!user || user.disabled) {
     throw new errors.UnauthorizedError()
   }
-
-  if (
-    user.accessToken.lastActivityAt
-    && ((new Date(user.accessToken.lastActivityAt).getTime() + CONFIG_IDLE_TIMEOUT_MS) < now)
-  ) {
-    throw new errors.IdleTimeoutError()
-  }
-
-  if (user.accessToken) {
-    userRepository.updateAccessToken(
-      user.accessToken.id,
-      { lastActivityAt: new Date().toISOString() },
-    )
-  }
-
-  const accessToken = user.accessToken
-  delete user.accessToken
   logger.info('verifyTokenPayload end')
   return {
     user,
-    loginTimeout: accessToken && new Date(accessToken.expiresAt).getTime(),
-    loginIdleTimeout: accessToken
-      && (new Date(accessToken.lastActivityAt).getTime() + CONFIG_IDLE_TIMEOUT_MS),
+    loginTimeout: jwtPayload.exp * 1000,
   }
 }
 
 async function login(input) {
-  logger.info(`login start: ${JSON.stringify(input)}`)
+  logger.info({ input }, 'login start')
   const user = await userRepository.findByEmail(input.email.toLowerCase())
   if (!user) {
     throw new errors.UnauthorizedError()
@@ -67,7 +45,7 @@ async function login(input) {
 }
 
 async function signUp(input) {
-  logger.info(`signUp start: ${JSON.stringify(input)}`)
+  logger.info({ input }, 'signUp start')
   const user = {
     name: input.name,
     email: input.email.toLowerCase(),
@@ -79,15 +57,7 @@ async function signUp(input) {
     throw new errors.ConflictError('User already exists.')
   }
   const createdUser = await userRepository.create(user)
-  const accessToken = {
-    userId: createdUser.id,
-    token: crypto.generateAccessToken(createdUser.id),
-    issuedAt: new Date().toISOString(),
-    expiresAt: new Date(new Date().getTime() + CONFIG_IDLE_TIMEOUT_MS).toISOString(),
-    lastActivityAt: new Date().toISOString(),
-  }
-  await userRepository.createAccessToken(accessToken)
-  createdUser.accessToken = accessToken.token
+  createdUser.accessToken = crypto.generateAccessToken(createdUser.id)
   logger.info('signUp end')
   return createdUser
 }

@@ -1,8 +1,8 @@
 'use strict'
 
-const { validate } = require('../validators')
+const { validate } = require('../validations')
 const operations = require('../operations/users')
-const schemas = require('../validators/schemas/users')
+const schemas = require('../validations/schemas/users')
 
 async function authenticate(ctx, next) {
   if (!ctx) {
@@ -16,9 +16,8 @@ async function authenticate(ctx, next) {
   const input = { jwtToken: parsedAuthHeader.value }
   validate(schemas.jwtToken, input)
   const data = await operations.verifyTokenPayload(input)
-  if (ctx.response && data.loginTimeout && data.loginIdleTimeout) {
+  if (ctx.response && data.loginTimeout) {
     ctx.set('Login-timeout', data.loginTimeout)
-    ctx.set('Login-idle-timeout', data.loginIdleTimeout)
   }
   ctx.state.user = data.user
   return next()

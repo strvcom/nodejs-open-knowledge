@@ -15,7 +15,10 @@ module.exports = {
     try {
       return jwt.verify(authToken, config.auth.secret, config.auth.verifyOptions)
     } catch (err) {
-      if (err instanceof jwt.JsonWebTokenError) {
+      if (
+        err instanceof jwt.JsonWebTokenError
+        || err instanceof SyntaxError
+      ) {
         return null
       }
       throw err

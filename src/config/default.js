@@ -43,10 +43,6 @@ module.exports = env => ({
       algorithm: 'HS256',
       issuer: `com.strv.nodejs-nights.${env}`,
     },
-    jwt: {
-      expiration: 60 * 60,
-      idleTimeoutSec: 60 * 60,
-    },
   },
   logger: {
     stdout: true,

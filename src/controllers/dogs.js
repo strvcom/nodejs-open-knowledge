@@ -1,8 +1,8 @@
 'use strict'
 
-const { validate } = require('./../validators')
+const { validate } = require('./../validations')
 const operations = require('./../operations/dogs')
-const schemas = require('./../validators/schemas/dogs')
+const schemas = require('./../validations/schemas/dogs')
 
 async function getAll(ctx) {
   ctx.body = await operations.getAll()
