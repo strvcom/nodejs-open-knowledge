@@ -27,4 +27,4 @@ Get names of all vehicles owned by `Luke Skywalker`. Use Starwars API to retriev
   - to install the package use `npm install request request-promise` (`request-promise` package needs `request` package as well, it uses it internally)
 
 4. Implement workflow with async await
-  - you await promises, so use the same `request-promise` package can be used
+  - `async await` works with promises so use the same `request-promise` package
