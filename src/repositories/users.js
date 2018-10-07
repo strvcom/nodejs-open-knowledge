@@ -1,28 +1,60 @@
 'use strict'
 
-const R = require('ramda')
 const errors = require('../utils/errors')
-const users = require('./../database/users.json')
+const { User } = require('../models')
 
+/**
+ * Returns all records
+ * @return {Promise<Array>}
+ */
 function findAll() {
-  return users
+  return User.query()
 }
 
-function findById(id) {
-  const user = R.find(R.propEq('id', id), users)
+/**
+ * Find user by id
+ * @param {Number} id User id
+ * @return {Promise<User>}
+ */
+async function findById(id) {
+  const user = await User.query()
+    .findById(id)
+
   if (!user) {
     throw new errors.NotFoundError()
   }
   return user
 }
 
-function findByEmail(email) {
-  return R.find(R.propEq('email', email), users)
+/**
+ * Find user by email
+ * @param {String} email User email
+ * @return {Promise<User>}
+ */
+async function findByEmail(email) {
+  const user = await User.query()
+    .where('email', email)
+    .first
+
+  if (!user) {
+    throw new errors.NotFoundError()
+  }
+  return user
 }
 
-function create(user) {
-  user.id = users.length + 1
-  users.push(user)
+/**
+ * Create a user
+ * @param {Object} attributes User attributes
+ * @param {String} attributes.email User email
+ * @param {String} attributes.name User name
+ * @param {String} attributes.password User password
+ * @param {boolean} attributes.disabled User disabled flag
+ * @return {Promise<User>}
+ */
+async function create(attributes) {
+  const user = await User.query()
+    .insertGraphAndFetch(attributes)
+
   return user
 }
 
