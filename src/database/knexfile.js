@@ -1,6 +1,6 @@
 'use strict'
 
-const _ = require('lodash')
+const R = require('ramda')
 const config = require('../config')
 
 const staticDatabaseConfig = {
@@ -12,7 +12,7 @@ const staticDatabaseConfig = {
   },
 }
 
-const databaseConfig = _.merge(config.database, staticDatabaseConfig)
+const databaseConfig = R.mergeDeepLeft(config.database, staticDatabaseConfig)
 
 module.exports = {
   [config.env]: databaseConfig,
