@@ -10,7 +10,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js | pino-pretty",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "migrate:make": "knex migrate:make --knexfile ./src/database/knexfile.js",
+    "db:migrate": "knex migrate:latest --knexfile ./src/database/knexfile.js",
+    "db:rollback": "knex migrate:rollback --knexfile ./src/database/knexfile.js",
+    "infra": "docker-compose up -d",
+    "infra:stop": "docker-compose down"
   },
   "repository": {
     "type": "git",
