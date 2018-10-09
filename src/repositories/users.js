@@ -34,7 +34,7 @@ async function findById(id) {
 async function findByEmail(email) {
   const user = await User.query()
     .where('email', email)
-    .first
+    .first()
 
   if (!user) {
     throw new errors.NotFoundError()
