@@ -1,7 +1,7 @@
 'use strict'
 
 const errors = require('../utils/errors')
-const { Dog } = require('../models')
+const { Dog } = require('../database/models')
 
 /**
  * Returns all records

@@ -1,12 +1,12 @@
 'use strict'
 
-const log = require('../utils/logger')
+const errors = require('./../utils/errors')
+const logger = require('./../utils/logger')
+const crypto = require('./../utils/crypto')
 const userRepository = require('../repositories/users')
-const errors = require('../utils/errors')
-const crypto = require('../utils/crypto')
 
 async function signUp(input) {
-  log.info({ input }, 'signUp')
+  logger.info({ input }, 'signUp')
   const user = {
     name: input.name,
     email: input.email.toLowerCase(),
@@ -19,12 +19,12 @@ async function signUp(input) {
   }
   const newUser = await userRepository.create(user)
   newUser.accessToken = await crypto.generateAccessToken(newUser.id)
-  log.info('signUp successful')
+  logger.info('signUp successful')
   return newUser
 }
 
 async function verifyTokenPayload(input) {
-  log.info({ input }, 'verifyTokenPayload')
+  logger.info({ input }, 'verifyTokenPayload')
   const jwtPayload = await crypto.verifyAccessToken(input.jwtToken)
   const now = Date.now()
   if (!jwtPayload || !jwtPayload.exp || now >= jwtPayload.exp * 1000) {
@@ -36,7 +36,7 @@ async function verifyTokenPayload(input) {
   if (!user || user.disabled) {
     throw new errors.UnauthorizedError()
   }
-  log.info('verifyTokenPayload')
+  logger.info('verifyTokenPayload')
   return {
     user,
     loginTimeout: jwtPayload.exp * 1000,
