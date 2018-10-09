@@ -38,7 +38,7 @@ async function findById(id) {
  */
 async function create(attributes) {
   const dog = await Dog.query()
-    .insertGraphAndFetch(attributes)
+    .insertAndFetch(attributes)
 
   return dog
 }

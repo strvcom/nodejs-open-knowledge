@@ -53,7 +53,7 @@ async function findByEmail(email) {
  */
 async function create(attributes) {
   const user = await User.query()
-    .insertGraphAndFetch(attributes)
+    .insertAndFetch(attributes)
 
   return user
 }
