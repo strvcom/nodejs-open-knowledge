@@ -1,19 +1,23 @@
 'use strict'
 
+const util = require('util')
 const crypto = require('crypto')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const config = require('./../config')
 
+const jwtSign = util.promisify(jwt.sign)
+const jwtVerify = util.promisify(jwt.verify)
+
 module.exports = {
   generateAccessToken(userId) {
     const payload = { userId }
-    return jwt.sign(payload, config.auth.secret, config.auth.createOptions)
+    return jwtSign(payload, config.auth.secret, config.auth.createOptions)
   },
 
   verifyAccessToken(authToken) {
     try {
-      return jwt.verify(authToken, config.auth.secret, config.auth.verifyOptions)
+      return jwtVerify(authToken, config.auth.secret, config.auth.verifyOptions)
     } catch (err) {
       if (
         err instanceof jwt.JsonWebTokenError

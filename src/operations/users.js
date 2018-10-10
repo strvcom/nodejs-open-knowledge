@@ -7,7 +7,7 @@ const userRepository = require('./../repositories/users')
 
 async function verifyTokenPayload(input) {
   logger.info({ input }, 'verifyTokenPayload start')
-  const jwtPayload = crypto.verifyAccessToken(input.jwtToken)
+  const jwtPayload = await crypto.verifyAccessToken(input.jwtToken)
   const now = Date.now()
   if (!jwtPayload || !jwtPayload.exp || now >= jwtPayload.exp * 1000) {
     throw new errors.UnauthorizedError()
@@ -35,7 +35,7 @@ async function login(input) {
   if (!verified || user.disabled) {
     throw new errors.UnauthorizedError()
   }
-  const accessToken = crypto.generateAccessToken(user.id)
+  const accessToken = await crypto.generateAccessToken(user.id)
   logger.info('login end')
   return {
     id: user.id,
@@ -57,7 +57,7 @@ async function signUp(input) {
     throw new errors.ConflictError('User already exists.')
   }
   const createdUser = await userRepository.create(user)
-  createdUser.accessToken = crypto.generateAccessToken(createdUser.id)
+  createdUser.accessToken = await crypto.generateAccessToken(createdUser.id)
   logger.info('signUp end')
   return createdUser
 }
