@@ -44,11 +44,11 @@ callApi('api.google.com')
   .then(data => {
     result = data
     console.log(data)
-    return callRemoteService('api.microsoft.com')
+    return callApi('api.microsoft.com')
   })
   .then(innerData => {
     console.log(innerData)
-    return callRemoteService('api.apple.com')
+    return callApi('api.apple.com')
   })
   .then(subData => {
     console.log(`${result} ${subData}`)
@@ -60,6 +60,14 @@ callApi('api.google.com')
 */
 
 // ------ Async await style ---------------------------------------------------
+
+function callApi(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Result: ${url}`)
+    }, 1000)
+  })
+}
 
 async function run() {
 
