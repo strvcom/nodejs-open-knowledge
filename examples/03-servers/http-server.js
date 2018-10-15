@@ -1,5 +1,7 @@
 'use strict'
 
+// Try with `curl localhost:3000`
+
 const http = require('http')
 
 const port = 3000

@@ -21,7 +21,8 @@ server.on('connection', socket => {
 
   socket.on('data', data => {
     log.info('Incoming data:', data)
-    log.info('Incoming data:', data.toString('utf8').replace(/\n$/u, ''))
+    log.info('Incoming string:', data.toString('utf8').replace(/\n$/u, ''))
+
     socket.write('Logged: ')
     socket.write(data)
   })
