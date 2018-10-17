@@ -14,6 +14,7 @@ const log = {
 /* eslint-enable no-console */
 
 const server = http.createServer()
+
 server.on('request', (req, res) => {
   log.info('Incoming request', {
     headers: req.headers,

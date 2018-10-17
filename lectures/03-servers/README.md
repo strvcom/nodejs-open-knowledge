@@ -19,7 +19,7 @@ Also basics of
 - process signals
 
 #### Links:
-- Slides
+- [Slides](https://docs.google.com/presentation/d/1rJOtXGaKL2s90MJCfhjr52E_fab8ww-4PDHFufu1n_Y/edit?usp=sharing)
 - [Homework](#homework)
 
 ## Servers introduction
@@ -57,7 +57,7 @@ Starting a Koa server is super simple:
 const Koa = require('koa')
 const app = new Koa()
 
-app.use(async ctx => {
+app.use(ctx => {
   ctx.body = 'Hello World'
 })
 
