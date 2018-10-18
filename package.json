@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strvcom/nodejs-nights-v2.git"
+    "url": "git+https://github.com/strvcom/nodejs-nights-2018.git"
   },
   "author": "STRV Backend Crew",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/strvcom/nodejs-nights-v2/issues"
+    "url": "https://github.com/strvcom/nodejs-nights-2018/issues"
   },
-  "homepage": "https://github.com/strvcom/nodejs-nights-v2#readme",
+  "homepage": "https://github.com/strvcom/nodejs-nights-2018#readme",
   "devDependencies": {
     "@strv/eslint-config-javascript": "^8.2.0",
     "eslint": "^5.4.0",
