@@ -137,7 +137,7 @@ There are a lot of useful things we've learned during the lesson.
 _A linter or lint refers to tools that analyze source code to flag programming errors, bugs, stylistic errors, and suspicious constructs._
 
 - https://eslint.org
-- .eslintrc.js
+- `.eslintrc.js`
 - Rule sets:
   - [STRV](https://www.npmjs.com/package/@strv/eslint-config-javascript)
   - [Airbnb](https://www.npmjs.com/package/eslint-config-airbnb-base)
