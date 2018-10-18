@@ -9,7 +9,6 @@ const port = 3000
 /* eslint-disable no-console */
 const log = {
   info: console.log,
-  error: console.error,
 }
 /* eslint-enable no-console */
 
