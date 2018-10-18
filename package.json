@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-nights-v2",
+  "version": "1.0.0",
+  "description": "Dogbook API",
+  "engines": {
+    "node": "~10.9.0",
+    "npm": "~6.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js | pino-pretty",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strvcom/nodejs-nights-2018.git"
+  },
+  "author": "STRV Backend Crew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strvcom/nodejs-nights-2018/issues"
+  },
+  "homepage": "https://github.com/strvcom/nodejs-nights-2018#readme",
+  "devDependencies": {
+    "@strv/eslint-config-javascript": "^8.2.0",
+    "eslint": "^5.4.0",
+    "nodemon": "^1.18.3",
+    "pino-pretty": "^2.0.1"
+  },
+  "dependencies": {
+    "jsonschema": "^1.2.4",
+    "kcors": "^2.2.2",
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-compress": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "pino": "^5.4.0"
+  }
+}
