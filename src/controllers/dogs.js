@@ -16,7 +16,7 @@ async function getById(ctx) {
   ctx.body = await operations.getById(input)
 }
 
-async function addDog(ctx) {
+async function createDog(ctx) {
   const input = {
     name: ctx.request.body.name,
     breed: ctx.request.body.breed,
@@ -24,11 +24,11 @@ async function addDog(ctx) {
     photo: ctx.request.body.photo,
   }
   validate(schemas.dog, input)
-  ctx.body = await operations.addDog(input)
+  ctx.body = await operations.createDog(input)
 }
 
 module.exports = {
   getAll,
   getById,
-  addDog,
+  createDog,
 }

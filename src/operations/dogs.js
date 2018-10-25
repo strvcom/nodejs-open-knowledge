@@ -10,12 +10,12 @@ function getById(input) {
   return dogRepository.findById(input.id)
 }
 
-function addDog(input) {
+function createDog(input) {
   return dogRepository.create(input)
 }
 
 module.exports = {
   getAll,
   getById,
-  addDog,
+  createDog,
 }
