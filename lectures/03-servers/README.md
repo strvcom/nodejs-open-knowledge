@@ -19,6 +19,7 @@ Also basics of
 - process signals
 
 #### Links:
+- [Video](https://youtu.be/RZpM9_ihsJk)
 - [Slides](https://docs.google.com/presentation/d/1rJOtXGaKL2s90MJCfhjr52E_fab8ww-4PDHFufu1n_Y/edit?usp=sharing)
 - [Homework](#homework)
 
