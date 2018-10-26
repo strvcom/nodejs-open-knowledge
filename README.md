@@ -20,5 +20,9 @@ utilised on backend.
 
 Another approach to splitting request handlig phases would be separating them out into folders and have a strict order
 in which they can be called. The division can be as follows. Each layer uses only the one directly underneath itself.
-1. *routes*: definition of API endpoints
-2. *controllers*: 
+1. *routes*: definition of API endpoints (each route has it's own controller)
+2. *controllers*: data parsing, data validation, calling operation(s), setting response
+3. *operations*: business logic execution (doesn't know anything about the server request, handles oly the data it needs)
+4. *repositories*: database calls, abstracts from used database and ORM
+
+... rest was because of time constraints only presented during 4th lecture and didn't make it here.
