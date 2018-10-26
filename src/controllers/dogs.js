@@ -24,7 +24,9 @@ async function createDog(ctx) {
     photo: ctx.request.body.photo,
   }
   validate(schemas.dog, input)
-  ctx.body = await operations.createDog(input)
+  const response = await operations.createDog(input)
+  ctx.status = 201
+  ctx.body = response
 }
 
 module.exports = {
