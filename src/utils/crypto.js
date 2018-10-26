@@ -15,11 +15,13 @@ module.exports = {
     return jwtSign(payload, config.auth.secret, config.auth.createOptions)
   },
 
-  verifyAccessToken(accessToken) {
+  async verifyAccessToken(accessToken) {
     try {
-      return jwtVerify(accessToken, config.auth.secret, config.auth.verifyOptions)
+      // Don't return directly for catch block to work properly
+      const data = await jwtVerify(accessToken, config.auth.secret, config.auth.verifyOptions)
+      return data
     } catch (err) {
-      if (err instanceof jwt.JsonWebTokenError) {
+      if (err instanceof jwt.JsonWebTokenError || err instanceof SyntaxError) {
         return null
       }
       throw err

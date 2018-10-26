@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Dogbook API",
   "engines": {
-    "node": "~10.9.0",
-    "npm": "~6.4.0"
+    "node": "~11.0.0",
+    "npm": "~6.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,31 +14,31 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strvcom/nodejs-nights-v2.git"
+    "url": "git+https://github.com/strvcom/nodejs-nights-2018.git"
   },
   "author": "STRV Backend Crew",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/strvcom/nodejs-nights-v2/issues"
+    "url": "https://github.com/strvcom/nodejs-nights-2018/issues"
   },
-  "homepage": "https://github.com/strvcom/nodejs-nights-v2#readme",
+  "homepage": "https://github.com/strvcom/nodejs-nights-2018#readme",
   "devDependencies": {
-    "@strv/eslint-config-javascript": "^8.3.0",
-    "eslint": "^5.6.1",
+    "@strv/eslint-config-javascript": "^8.3.1",
+    "eslint": "^5.7.0",
     "nodemon": "^1.18.4",
-    "pino-pretty": "^2.2.1"
+    "pino-pretty": "^2.2.2"
   },
   "dependencies": {
-    "bcrypt": "^3.0.1",
-    "dotenv": "^6.0.0",
+    "bcrypt": "^3.0.2",
+    "dotenv": "^6.1.0",
     "jsonschema": "^1.2.4",
     "jsonwebtoken": "^8.3.0",
     "kcors": "^2.2.2",
-    "koa": "^2.5.3",
+    "koa": "^2.6.1",
     "koa-body": "^4.0.4",
     "koa-compress": "^3.0.0",
     "koa-router": "^7.4.0",
-    "pino": "^5.6.2",
+    "pino": "^5.8.0",
     "ramda": "^0.25.0"
   }
 }
