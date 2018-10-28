@@ -1,4 +1,4 @@
-/* eslint-disable no-process-env, import/first, global-require */
+/* eslint-disable global-require */
 'use strict'
 
 const env = process.env.NODE_ENV || 'local'
