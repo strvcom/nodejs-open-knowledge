@@ -27,7 +27,7 @@ class Dog extends Base {
           type: 'string',
         },
         birthYear: {
-          type: 'date',
+          type: 'integer',
         },
         photo: {
           type: 'string',

@@ -12,7 +12,7 @@ const R = require('ramda')
 const config = require('../config')
 const knexEnvConfig = require('./knexfile')[config.env]
 
-const knexConfig = R.mergeDeepRight({}, knexEnvConfig, objection.knexSnakeCaseMappers())
+const knexConfig = R.mergeDeepWith({}, knexEnvConfig, objection.knexSnakeCaseMappers())
 const knex = knexLib(knexConfig)
 
 const Model = objection.Model

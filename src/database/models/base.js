@@ -1,6 +1,6 @@
 'use strict'
 
-const database = require('./index')
+const database = require('../index')
 
 class Base extends database.Model {
   $beforeInsert() {
