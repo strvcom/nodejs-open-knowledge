@@ -1,7 +1,7 @@
 # Node.JS lecture summary
 
 * [Presentation](https://docs.google.com/presentation/d/14PalrqWD1lNJ3wi443abAxPkNZGTqFDxO3piZ0_SKws/edit?usp=sharing)
-* Video (TODO)
+* [Video](https://www.youtube.com/watch?v=Dc0SZzt-KuI)
 
 ## Topics
 
