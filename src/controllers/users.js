@@ -4,6 +4,15 @@ const { validate } = require('../validations')
 const operations = require('../operations/users')
 const schema = require('../validations/schemas/users')
 
+async function login(ctx) {
+  const input = {
+    email: ctx.request.body.username,
+    password: ctx.request.body.password,
+  }
+  validate(schema.login, input)
+  ctx.body = await operations.login(input)
+}
+
 async function signUp(ctx) {
   const input = {
     name: ctx.request.body.name,
@@ -17,5 +26,6 @@ async function signUp(ctx) {
 }
 
 module.exports = {
+  login,
   signUp,
 }

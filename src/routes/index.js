@@ -9,6 +9,7 @@ const users = require('../controllers/users')
 const router = new Router()
 router.use(handleErrors)
 
+router.post('/session/user', users.login)
 router.post('/users', users.signUp)
 
 router.get('/dogs', authenticate, dogs.getAll)
