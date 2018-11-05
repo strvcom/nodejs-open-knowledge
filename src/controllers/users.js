@@ -6,7 +6,7 @@ const schema = require('../validations/schemas/users')
 
 async function login(ctx) {
   const input = {
-    email: ctx.request.body.username,
+    email: ctx.request.body.email,
     password: ctx.request.body.password,
   }
   validate(schema.login, input)
