@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests",
+    "test:coverage": "NODE_ENV=test npx nyc mocha --opts ./tests/mocha.opts ./tests",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js | pino-pretty",
     "lint": "eslint .",
@@ -33,6 +34,7 @@
     "eslint": "^5.7.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.4",
+    "nyc": "^13.1.0",
     "pino-pretty": "^2.2.2",
     "supertest-koa-agent": "^0.3.0"
   },

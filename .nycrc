@@ -1,0 +1,16 @@
+{
+  "all": true,
+  "reporter": [
+    "lcov",
+    "text",
+    "text-summary"
+  ],
+  "include": [
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "src/config",
+    "src/app.js",
+    "src/database/migrations/*"
+  ]
+}
