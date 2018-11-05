@@ -42,6 +42,7 @@ module.exports = env => ({
     },
   },
   logger: {
+    enabled: true,
     stdout: true,
     minLevel: 'debug',
   },
