@@ -1,5 +1,6 @@
 'use strict'
 
+const R = require('ramda')
 const Base = require('./base')
 
 class User extends Base {
@@ -34,6 +35,13 @@ class User extends Base {
         },
       },
     }
+  }
+
+  toJSON() {
+    return R.omit([
+      'password',
+      'updatedAt',
+    ], super.toJSON())
   }
 }
 
