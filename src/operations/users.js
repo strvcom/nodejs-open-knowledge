@@ -33,16 +33,9 @@ async function signUp(input) {
     disabled: false,
   }
 
-  let alreadyExists
-  try {
-    alreadyExists = await userRepository.findByEmail(user.email)
-  } catch (err) {
-    if (!(err instanceof errors.NotFoundError)) {
-      throw err
-    }
-  }
+  const existingUser = await userRepository.findByEmail(user.email)
 
-  if (alreadyExists) {
+  if (existingUser) {
     throw new errors.ConflictError('User already exists.')
   }
   const createdUser = await userRepository.create(user)
