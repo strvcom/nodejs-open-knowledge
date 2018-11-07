@@ -1,0 +1,6 @@
+--colors
+--recursive
+--timeout 5000
+--check-leaks
+--globals level
+--exit

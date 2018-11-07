@@ -7,7 +7,7 @@
     "npm": "~6.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test npx mocha --opts ./tests/mocha.opts ./tests",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js | pino-pretty",
     "lint": "eslint .",
@@ -29,7 +29,9 @@
   "homepage": "https://github.com/strvcom/nodejs-nights-2018#readme",
   "devDependencies": {
     "@strv/eslint-config-javascript": "^8.3.1",
+    "chai": "^4.2.0",
     "eslint": "^5.7.0",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.4",
     "pino-pretty": "^2.2.2"
   },
