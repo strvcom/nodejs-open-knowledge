@@ -2,8 +2,12 @@
 
 const request = require('supertest-koa-agent')
 const { expect } = require('chai')
+const sinon = require('sinon')
 const app = require('../../../src/app')
 const { resetDb } = require('../../helpers')
+const dogApi = require('../../../src/services/dogapi')
+
+const sandbox = sinon.createSandbox()
 
 describe('Dogs', () => {
   beforeEach(resetDb)
@@ -22,9 +26,13 @@ describe('Dogs', () => {
         .expect(201)
 
       userToken = res.body.accessToken
+
+      sandbox.stub(dogApi, 'getRandomBreedImage')
+        .returns(Promise.resolve('http://domain.com/image.jpg'))
     })
 
     it('responds with newly created dog', async () => {
+      sinon.mock(dogApi)
       const dogData = {
         name: 'Azor',
         breed: 'chihuahua',
@@ -56,5 +64,7 @@ describe('Dogs', () => {
         'photo',
       ])
     })
+
+    afterEach(() => sandbox.restore())
   })
 })

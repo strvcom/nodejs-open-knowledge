@@ -36,6 +36,7 @@
     "nodemon": "^1.18.4",
     "nyc": "^13.1.0",
     "pino-pretty": "^2.2.2",
+    "sinon": "^7.1.1",
     "supertest-koa-agent": "^0.3.0"
   },
   "dependencies": {
