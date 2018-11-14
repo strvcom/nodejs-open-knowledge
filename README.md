@@ -3,7 +3,8 @@
 Thank you for participating in our course. Here you can find a list of past lessons:
 
 1. [Javascript](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/01-javascript)
-2. [Node.js](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/02-nodejs)
-3. [Servers](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/03-servers)
-4. [Architecture](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/04-architecture)
-4. [Database](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/05-database)
+1. [Node.js](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/02-nodejs)
+1. [Servers](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/03-servers)
+1. [Architecture](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/04-architecture)
+1. [Database](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/05-database)
+1. [Testing](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/06-testing)
