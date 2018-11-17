@@ -1,0 +1,52 @@
+---
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - 11.0.0
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+services:
+  - docker
+
+env:
+  global:
+    - NODE_ENV=test
+
+install:
+  - npm install
+
+before_script:
+  - sudo service postgresql stop
+  - docker ps
+  - npm run infra
+  - sleep 5
+  - npm run db:migrate
+
+script:
+  - npm run test:coverage
+
+after_success:
+  - echo Upload code coverage 💪
+
+deploy:
+  - provider: heroku
+    skip_cleanup: true
+    api_key:
+      secure: "n0GT0Ohq2rHItRjaTUb28CcD/w59yVl9NtphqF2n5cbAr9ejIoyg8JS3p0RoaEtJuoPT+mCCyCl8WjVI/iiaHnC3OewvL8H7UyPYO2DKwHG9joYVcyUAc+jgb2A66bqFvmUbgpSYlKIZ2IbSUYfOtR5bBVHC7R5M7WAhP72p6hxEYAxLFFAcAZr0wEYNYkdOaLvLtBwuL5YEw3jBkEYs7MAzYVCY3rqc6kojzMGJNQKkH2iPpU3ITr5BnZ/LMR0q9XmwduG2t3wo54ktprcaEwn3CinLX/rZt5qrRBjd6nryzWSo3mDvbanqis9IGKw/mwSMDzeKqrq7VqeziMrk58AJVOVBGw+PFRa9tdPr+glQ7B1dXYCjKlWpdpiPfvZVG5K5WLBOTVEZYeLByuk6JWhLqmmbliCayY1dYhOmyuYX3cyNUTZrNEqhkggYRj8wbsLN9ARnC41np//Hm1CNL1DY1uLoi07gILVCqBh97bBZiYMZ1C9BcZwh9nqhqpoKw9q+8oENLa/t45Aq9y+6r98BraOIYVl6bikZVDCKE0IUPVdYVNnBNXGOCVdnyMgYv4thPIOISQfQ6bH+VBEYP5Lp2blX/ZTDDjO1WdZx6sDxWhwpwQ46jpMyMxcYn7VOAZffJ+nYaRgdpmI1VmiZEpyZGAuXnIFsnVpC31Mn5rU="
+    app: nodejs-nights-2018-app
+    strategy: git
+    on:
+      branch:
+        - master
+      repo: strvcom/nodejs-nights-2018
+
+notifications:
+  email: false
