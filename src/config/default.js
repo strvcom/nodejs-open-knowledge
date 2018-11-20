@@ -63,4 +63,7 @@ module.exports = env => ({
       minConfidence: 90,
     },
   },
+  jobs: {
+    redisUrl: process.env.REDIS_URL || 'redis://127.0.0.1:6379',
+  },
 })
