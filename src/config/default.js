@@ -55,4 +55,12 @@ module.exports = env => ({
       max: process.env.DATABASE_POOL_MAX || 5,
     },
   },
+  aws: {
+    s3: {
+      bucketName: process.env.AWS_S3_BUCKET_NAME,
+    },
+    rekognition: {
+      minConfidence: 90,
+    },
+  },
 })
