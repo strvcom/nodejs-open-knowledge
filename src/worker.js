@@ -1,7 +1,6 @@
 'use strict'
 
 const log = require('./utils/logger')
-const testJob = require('./jobs/test')
 const verificationJob = require('./jobs/verification')
 
 const worker = {}
@@ -11,7 +10,6 @@ worker.start = () => {
   log.info('Starting worker…')
 
   // Start jobs here:
-  testJob.execute()
   verificationJob.execute()
 }
 
