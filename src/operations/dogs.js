@@ -27,10 +27,12 @@ async function createDog(input) {
     input.photo = await dogApi.getRandomBreedImage(input.breed)
   }
 
-  verificationJob.add(input.photo)
-
   // For the sake of simplicity, we are not checking if photo is still null at this point.
-  return dogRepository.create(input)
+  const dog = await dogRepository.create(input)
+
+  verificationJob.add(dog.id, input.photo)
+
+  return dog
 }
 
 async function updateDog(id, input) {
