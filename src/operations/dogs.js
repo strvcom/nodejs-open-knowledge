@@ -3,6 +3,7 @@
 const dogApi = require('../services/dogapi')
 const errors = require('../utils/errors')
 const rekognition = require('../services/rekognition')
+const verificationJob = require('../jobs/verification')
 const dogRepository = require('./../repositories/dogs')
 
 async function needDog(id) {
@@ -26,6 +27,9 @@ async function createDog(input) {
   if (!input.photo) {
     input.photo = await dogApi.getRandomBreedImage(input.breed)
   }
+
+  verificationJob.add(input.photo)
+
   // For the sake of simplicity, we are not checking if photo is still null at this point.
   return dogRepository.create({
     ...input,
