@@ -1,6 +1,6 @@
 # Architecture
 
-Each API request typicaly goes through several phases when being handled. These phases would more or less be:
+Each API request typically goes through several phases when being handled. These phases would more or less be:
 
  1. Request data parsing
  2. Request data validation
@@ -8,16 +8,16 @@ Each API request typicaly goes through several phases when being handled. These 
  4. Business logic execution
  5. Response data mapping
 
-Some of these phases may interleave or be omitted, but it's good to be able to idetify them and separate them
+Some of these phases may interleave or be omitted, but it's good to be able to identify them and separate them
 when our code becomes too complex to conveniently reason about. Different frameworks take different approaches
 on how to separate these phases.
 
 Some do so through inheriting from a base class which contains logic to run descendants methods in specified order
-typicaly refered to as class lifecycle. So the request handling phases are split into methods and the order
+typically referred to as class lifecycle. So the request handling phases are split into methods and the order
 of their execution is handled by the base class. This approach is quite common for UI components, but can also be effectively
-utilised on backend.
+utilized on backend.
 
-Another approach to splitting request handlig phases would be separating them out into folders and have a strict order
+Another approach to splitting request handling phases would be separating them out into folders and have a strict order
 in which they can be called. The division can be as follows. Each layer uses only the one directly underneath itself.
 
 1. *routes*: definition of API endpoints (each route has it's own controller)
@@ -30,7 +30,7 @@ in the slides attached in this folder.
 
 # Homework
 
-Homework has two parts this time. First one is strongly recomended to get familiar with how stateless authentication would be done in Node.js. Second part is optional for those who realy want to understand the project architecture we discussed. The reason it's optional is mainly because it does take cosiderable amount of time to complete.
+Homework has two parts this time. First one is strongly recommended to get familiar with how stateless authentication would be done in Node.js. Second part is optional for those who really want to understand the project architecture we discussed. The reason it's optional is mainly because it does take considerable amount of time to complete.
 
 ## 1. Implement user sign in route
 
@@ -61,4 +61,3 @@ The most important part of this task is to abide the responsibility division we 
 3. And if you're feeling lucky, try reimplementing authorization routes and middleware.
 
 If you're going to try this second optional homework, be prepared it will take you time. Also don't be afraid to heavily inspire yourself by the existing code in this branch. The objective here is to get your hands on how the parts of the system connect one to another, not to reinvent it from the ground up. Therefore even copying parts of files from this repository works fine for this task. Good luck to all you adventurous who will take me up on this challenge.
-
