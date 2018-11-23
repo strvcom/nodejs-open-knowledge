@@ -58,7 +58,7 @@ information to carry out this task easily.
 
 If that last uncovered line bugs you and you would like to score extra credit, try to improve coverage as much as reaching
 100%. Hint: To do so, you'll need to find and fix a bug that creeped 
-into our code during one of the previous lessons. Bug should get revealed by a test you'll write. 
+into our code during one of the previous lessons. Bug should get revealed by a test you'll write.
 
 ## 2. Optional
 
