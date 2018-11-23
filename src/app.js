@@ -3,6 +3,7 @@
 const Koa = require('koa')
 const koaBody = require('koa-body')
 const koaCompress = require('koa-compress')
+const koaHelmet = require('koa-helmet')
 const koaCors = require('kcors')
 const router = require('./routes')
 const config = require('./config')
@@ -14,6 +15,7 @@ const services = {
 
 const app = new Koa()
 
+app.use(koaHelmet())
 app.use(koaCompress())
 app.use(koaCors())
 app.use(koaBody())
