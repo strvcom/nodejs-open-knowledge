@@ -6,6 +6,7 @@ const sinon = require('sinon')
 const app = require('../../../src/app')
 const { resetDb } = require('../../helpers')
 const dogApi = require('../../../src/services/dogapi')
+const rekognition = require('../../../src/services/rekognition')
 
 const sandbox = sinon.createSandbox()
 
@@ -29,10 +30,12 @@ describe('Dogs', () => {
 
       sandbox.stub(dogApi, 'getRandomBreedImage')
         .returns(Promise.resolve('http://domain.com/image.jpg'))
+
+      sandbox.stub(rekognition, 'isDogRecognized')
+        .returns(Promise.resolve(true))
     })
 
     it('responds with newly created dog', async () => {
-      sinon.mock(dogApi)
       const dogData = {
         name: 'Azor',
         breed: 'chihuahua',
@@ -62,6 +65,7 @@ describe('Dogs', () => {
         'breed',
         'birthYear',
         'photo',
+        'photoVerified',
       ])
     })
 

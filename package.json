@@ -42,7 +42,9 @@
     "supertest-koa-agent": "^0.3.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.358.0",
     "bcrypt": "^3.0.2",
+    "bluebird": "^3.5.3",
     "dotenv": "^6.1.0",
     "jsonschema": "^1.2.4",
     "jsonwebtoken": "^8.4.0",
