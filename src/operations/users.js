@@ -64,8 +64,18 @@ async function verifyTokenPayload(input) {
   }
 }
 
+async function getById(id) {
+  const user = await userRepository.findById(id)
+  if (!user) {
+    throw new errors.NotFoundError()
+  }
+
+  return user
+}
+
 module.exports = {
   login,
   signUp,
   verifyTokenPayload,
+  getById,
 }
