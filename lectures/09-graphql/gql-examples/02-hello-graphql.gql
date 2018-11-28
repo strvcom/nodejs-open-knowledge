@@ -1,0 +1,9 @@
+query {
+  dogs {
+    id
+    name
+    breed
+    birthYear
+    photo
+  }
+}

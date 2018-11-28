@@ -26,7 +26,7 @@ const generateDog = userId => {
   const dogData = {
     name: chance.first(),
     breed: chance.pickone(['husky', 'bulldog', 'terrier', 'beagle']),
-    birthYear: parseInt(chance.year({ min: 2000, max: 2018 })),
+    birthYear: parseInt(chance.year({ min: 2000, max: 2017 })),
     userId,
   }
   return dogOperations.createDog(dogData)

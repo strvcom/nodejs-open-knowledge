@@ -1,0 +1,14 @@
+query getDogs($withUser: Boolean!) {
+  dogs {
+    id
+    name
+    breed
+    birthYear
+    photo
+    user @include (if: $withUser) {
+      id
+      name
+    }
+  }
+}
+

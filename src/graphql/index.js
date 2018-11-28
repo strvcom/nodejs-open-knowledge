@@ -8,6 +8,7 @@ const defaultPlaygroundConfig = {
   settings: {
     'editor.theme': 'light',
     'editor.cursorShape': 'line',
+    'editor.fontSize': 16,
   },
 }
 

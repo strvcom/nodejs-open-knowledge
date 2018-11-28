@@ -26,6 +26,11 @@
 6. Authorization & context
 7. Data loader
 
+### Other commands
+```
+NODE_ENV=local npm run db:migrate
+```
+
 ## Resources
 - [Language](https://graphql.org/learn/queries/)
 - [Public GraphQL APIs](https://github.com/APIs-guru/graphql-apis)

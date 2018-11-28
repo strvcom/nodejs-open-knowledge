@@ -1,0 +1,19 @@
+{
+  "data": {
+    "belle": {
+      "id": 1,
+      "name": "Belle",
+      "breed": "beagle",
+      "birthYear": 2018,
+      "photo": "https://images.dog.ceo/n02088364_10731.jpg"
+    },
+    "dollie": {
+      "id": 2,
+      "name": "Dollie",
+      "breed": "terrier",
+      "birthYear": 2006,
+      "photo": "https://images.dog.ceo/n02093754_3442.jpg"
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+query getDogs {
+  belle: dog(id:1) {
+    id
+    name
+    breed
+    birthYear
+    photo
+  }
+  dollie: dog(id: 2) {
+    id
+    name
+    breed
+    birthYear
+    photo
+  }
+}
+

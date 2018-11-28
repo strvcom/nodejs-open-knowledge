@@ -1,0 +1,14 @@
+query getDogs($breed: String!) {
+  dogs(filter: { breed: $breed }) {
+    id
+    name
+    breed
+    birthYear
+    photo
+    user {
+      id
+      name
+    }
+  }
+}
+
