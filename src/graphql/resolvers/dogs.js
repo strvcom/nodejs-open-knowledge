@@ -5,8 +5,14 @@ const userOperations = require('../../operations/users')
 
 module.exports = {
   Query: {
-    dog: (root, args) => operations.getById({ id: args.id }),
-    dogs: () => operations.getAll(),
+    dog: (root, args, ctx) => {
+      ctx.requireAuth()
+      return operations.getById({ id: args.id })
+    },
+    dogs: (root, args, ctx) => {
+      ctx.requireAuth()
+      return operations.getAll()
+    },
   },
   Dog: {
     // Computed field
