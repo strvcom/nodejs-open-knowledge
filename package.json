@@ -49,6 +49,7 @@
     "bcrypt": "^3.0.2",
     "bluebird": "^3.5.3",
     "bull": "^3.5.2",
+    "dataloader": "^1.4.0",
     "dotenv": "^6.1.0",
     "graphql": "^14.0.2",
     "jsonschema": "^1.2.4",

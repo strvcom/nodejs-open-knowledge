@@ -6,6 +6,7 @@ const { getAuthPayload } = require('../middleware/authentication')
 const errors = require('../utils/errors')
 const logger = require('../utils/logger')
 const { typeDefs, resolvers } = require('./schema')
+const UserDataLoader = require('./loaders/users')
 
 const defaultPlaygroundConfig = {
   settings: {
@@ -36,6 +37,9 @@ async function makeContext(app) {
       if (!data) {
         throw new errors.UnauthorizedError()
       }
+    },
+    loaders: {
+      users: new UserDataLoader(),
     },
   }
 }

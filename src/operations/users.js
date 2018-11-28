@@ -73,9 +73,15 @@ async function getById(id) {
   return user
 }
 
+async function getByIds(ids) {
+  const users = await userRepository.findByIds(ids)
+  return users
+}
+
 module.exports = {
   login,
   signUp,
   verifyTokenPayload,
   getById,
+  getByIds,
 }

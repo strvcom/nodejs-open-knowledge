@@ -1,7 +1,7 @@
 'use strict'
 
 const operations = require('../../operations/dogs')
-const userOperations = require('../../operations/users')
+// const userOperations = require('../../operations/users')
 
 module.exports = {
   Query: {
@@ -18,9 +18,13 @@ module.exports = {
     // Computed field
     age: dog => dog.age || new Date().getFullYear() - dog.birthYear,
 
-    // Issue Example - N+1 query issue
-    user: dog => dog.userId
-      ? userOperations.getById(dog.userId)
+    // Issue: N+1 query
+    // user: dog => dog.userId ? userOperations.getById(dog.userId) : null,
+
+    // Issue: solution
+    user: (dog, args, ctx) => dog.userId
+      ? ctx.loaders.users.load(dog.userId)
       : null,
+
   },
 }
