@@ -46,6 +46,9 @@ async function makeContext(app) {
 
 function addGraphQL(app) {
   const enableIntrospection = config.env !== 'production'
+  const engineConfig = config.apolloEngineApiKey
+    ? { apiKey: config.apolloEngineApiKey }
+    : false
 
   // Create Apollo server
   const server = new ApolloServer({
@@ -56,7 +59,7 @@ function addGraphQL(app) {
     playground: enableIntrospection ? defaultPlaygroundConfig : false,
     context: makeContext,
     formatError,
-    // engineConfig,
+    engine: engineConfig,
   })
 
   // Apply Apollo middleware

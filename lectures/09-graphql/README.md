@@ -25,6 +25,10 @@
   * with User
 6. Authorization & context
 7. Data loader
+8. Engine
+```
+apollo schema:publish --endpoint http://localhost:3001/graphql --key="service:nodejs-nights-demo:7Socfp7u1gbFTbB1c8cLfw"
+```
 
 ### Other commands
 ```
