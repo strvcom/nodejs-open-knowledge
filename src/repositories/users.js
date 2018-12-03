@@ -21,6 +21,17 @@ function findById(id) {
 }
 
 /**
+ * Find users by ids provided
+ * @param {Number[]} ids User ids
+ * @return {Promise<User>}
+ */
+function findByIds(ids) {
+  return User.query()
+    .where('id', 'in', ids)
+}
+
+
+/**
  * Find user by email
  * @param {String} email User email
  * @return {Promise<User>}
@@ -55,6 +66,7 @@ module.exports = {
   patchById,
   findAll,
   findById,
+  findByIds,
   findByEmail,
   create,
 }

@@ -1,0 +1,14 @@
+query getDogs {
+  dogs {
+    id
+    name
+    breed
+    birthYear
+    photo
+    user {
+      id
+      name
+    }
+  }
+}
+

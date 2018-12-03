@@ -1,0 +1,17 @@
+query getDogs {
+  belle: dog(id:1) {
+    ...DogFields
+  }
+  dollie: dog(id: 2) {
+    ...DogFields
+  }
+}
+
+fragment DogFields on Dog {
+  id
+  name
+  breed
+  birthYear
+  photo
+}
+

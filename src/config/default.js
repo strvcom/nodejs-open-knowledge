@@ -66,4 +66,5 @@ module.exports = env => ({
   jobs: {
     redisUrl: process.env.REDIS_URL || 'redis://127.0.0.1:6379',
   },
+  apolloEngineApiKey: process.env.APOLLO_ENGINE_API_KEY,
 })

@@ -1,0 +1,11 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Yellow",
+      "genre": "Fiction",
+      "numberOfAwards": 8
+    }
+  ]
+}
+

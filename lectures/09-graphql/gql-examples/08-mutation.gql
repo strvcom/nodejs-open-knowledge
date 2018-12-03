@@ -1,0 +1,10 @@
+mutation createDog($input: CreateDogInput!) {
+  createDog(input: $input) {
+    id
+    name
+    breed
+    birthYear
+    photo
+  }
+}
+
