@@ -12,6 +12,7 @@ Thank you for participating in our course. Here you can find a list of past less
 6. [Testing](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/06-testing)
 7. [Deployment](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/07-deployment)
 8. [Workers & Queues and Security](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/08-workers-security)
+9. [GraphQL](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/09-graphql)
 
 Recordings of all sessions can be found in youtube playlist:
 
