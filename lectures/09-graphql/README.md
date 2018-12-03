@@ -1,5 +1,10 @@
 
-# 8. Lecture summary
+# 8. GraphQL
+
+## Resources
+
+* [Presentation](https://docs.google.com/presentation/d/1H0dKAiMofkCGX01YjEDJ3KdKePbTNjzGKCC1n67qJQc/edit?usp=sharing)
+* Video - TBD
 
 ## Theoretical part
 * Motivation
@@ -22,12 +27,13 @@
 5. Implement queries
   * dogs: [Dog]
   * dog(id: Int!): Dog
-  * with User
+  * login mutation
 6. Authorization & context
 7. Data loader
 8. Engine
+
 ```
-apollo schema:publish --endpoint http://localhost:3001/graphql --key="service:nodejs-nights-demo:7Socfp7u1gbFTbB1c8cLfw"
+apollo schema:publish --endpoint http://localhost:3001/graphql --key="<apollo-engine-service-key>"
 ```
 
 ### Other commands
@@ -40,3 +46,4 @@ NODE_ENV=local npm run db:migrate
 - [Public GraphQL APIs](https://github.com/APIs-guru/graphql-apis)
 - [GraphQL Tools](https://github.com/chentsulin/awesome-graphql)
 - [Countries GraphQL](https://countries.trevorblades.com/)
+- [GraphQL Voyager](https://apis.guru/graphql-voyager/)
