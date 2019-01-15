@@ -1,6 +1,6 @@
 ## Introduction
 This repository serves as an online course for learning nodejs.
-It’s here to help those who want to learn more about nodejs or backend to develop a backend API.
+It’s here to help those who want to learn more about nodejs and backend to develop a backend API.
 
 #### Goal
 To give you a fundamental understanding of backend and nodejs.
@@ -8,8 +8,8 @@ To give you a fundamental understanding of backend and nodejs.
 Presenters in our courses demonstrated the best practices in building nodejs applications based on their experience gained from numerous projects.
 
 #### Source
-This repository & online course was created and transformed from the course **STRV Nodejs Nights**–
-a completely free offline course focused on Nodejs created by [STRV](https://www.strv.com/).
+This repository ("online course") was created and transformed from **STRV Nodejs Nights**–
+a free offline course focused on Nodejs created by [STRV](https://www.strv.com/).
 
 #### Prerequisites
 The course requires at least a junior-level knowledge of programming (don’t need to be experienced with javascript, node or backend itself).
@@ -21,7 +21,7 @@ focus on building up one simple project from scratch to demonstrate all the prac
 
 Each lecture contains a video recording of the presentation with live coding and sample codes.
 
-The course focuses on understanding good architectural practices and project setups. Please keep it mind that for the purpose of the course, it’s simplified to easily demonstrate fundamental patterns.
+The course focuses on understanding good architectural practices and project setups. Please keep it mind that for the purpose of the course, it’s simplified compared to big production app to easily demonstrate fundamental patterns.
 
 ## Materials
 
