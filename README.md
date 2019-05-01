@@ -1,18 +1,18 @@
 ## Introduction
-This repository serves as an online course for learning nodejs.
-It’s here to help those who want to learn more about nodejs and backend to develop a backend API.
+This repository serves as an online course for learning Node.js.
+It’s here to help those who want to learn more about Node.js and backend to develop a backend API.
 
 #### Goal
-To give you a fundamental understanding of backend and nodejs.
+To give you a fundamental understanding of backend and Node.js.
 
-Presenters in our courses demonstrated the best practices in building nodejs applications based on their experience gained from numerous projects.
+Presenters in our courses demonstrated the best practices in building Node.js applications based on their experience gained from numerous projects.
 
 #### Source
 This repository ("online course") was created and transformed from **STRV Nodejs Nights**–
-a free offline course focused on Nodejs created by [STRV](https://www.strv.com/).
+a free offline course focused on Node.js created by [STRV](https://www.strv.com/).
 
 #### Prerequisites
-The course requires at least a junior-level knowledge of programming (don’t need to be experienced with javascript, node or backend itself).
+The course requires at least a junior-level knowledge of programming (don’t need to be experienced with javascript, Node.js or backend itself).
 
 ## Contents
 
@@ -55,7 +55,7 @@ Recordings of all sessions can be found in a youtube playlist:
 ## Used technologies
 #### Language & Runtime
 - Javascript. ES6
-- Nodejs 11
+- Node.js 11
 
 #### Framework
 - [Koa](https://github.com/koajs/koa) as web application framework
@@ -66,7 +66,7 @@ Recordings of all sessions can be found in a youtube playlist:
 - [Knex](https://github.com/tgriesser/knex) as query builder (for migrations)
 
 #### Testing
-- [Mocha](https://github.com/mochajs/mocha) as the most robust testing framework for node.
+- [Mocha](https://github.com/mochajs/mocha) as the most robust testing framework for Node.js.
 - [Sinon.js](https://sinonjs.org/) for mocking.
 
 #### Containerization
