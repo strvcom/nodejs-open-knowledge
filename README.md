@@ -49,7 +49,7 @@ Here you can find a list of past lessons:
 #### Video recordings
 Recordings of all sessions can be found in a youtube playlist:
 
-[https://www.youtube.com/playlist?list=PLfX7tWavkVjAVN1blitcU6R5C5d8zqieM](https://www.youtube.com/playlist?list=PLfX7tWavkVjAVN1blitcU6R5C5d8zqieM)
+[https://www.youtube.com/playlist?list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP](https://www.youtube.com/playlist?list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP)
 
 
 ## Used technologies
