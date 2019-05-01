@@ -6,6 +6,12 @@ need to be tested thoroughly. Otherwise such a projects will be riddled with bug
 You can try to test your software by manually running it and observing how it behaves. However, you won't get far with
 this approach. As your project will grow, manual testing quickly becomes unmanageable.
 
+
+#### Links:
+- [Video](https://www.youtube.com/watch?v=Aykxg9loDjE&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=6)
+- [Slides](./Node.js_Nights_Testing.pdf)
+- [Homework](#homework)
+
 ## Testing Frameworks
 Luckily there are tools to help you with automatization of your tests. Currently there are two dominant test frameworks
 to choose from:

@@ -4,6 +4,11 @@ This lecture was meant to talk about databases and how to setup the database con
 
 In this repository, I tried to separate each step in a different commit so, if you want to check how the project evolves, you can check the sequence of commits on this branch.
 
+#### Links:
+- [Video](https://www.youtube.com/watch?v=rjLyRJT5QCk&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=5)
+- [Slides](./Node.js_Nights_Databases.pdf)
+- [Homework](#homework)
+
 # Homework
 
 The homework for this week will consist basically into setting a database and using it in your project.

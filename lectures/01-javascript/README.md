@@ -2,7 +2,7 @@
 
 - [Topics covered](./topics.md)
 - [Presentation](https://docs.google.com/presentation/d/1C1bWK_-J_7KjjXM2SxbeIRa4Uzxn7QfIbS6u_y6EDos/edit?usp=sharing)
-- [Video] (https://www.youtube.com/watch?v=vvsRb8BqeBQ)
+- [Video](https://www.youtube.com/watch?v=M3k3FneJmQU&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=2&t=0s)
 
 ## Homework
 

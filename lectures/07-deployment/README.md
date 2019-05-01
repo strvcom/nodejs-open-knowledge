@@ -1,7 +1,7 @@
 # Deployment
 
 - [Presentation](https://docs.google.com/presentation/d/13fmv92YSw5MTSJXsqd7SIMBV5juefxKfO0Rzh4qfaY8/edit?usp=sharing)
-- [Video (WIP)](https://www.youtube.com)
+- [Video](https://www.youtube.com/watch?v=Jb1ztje-CQE&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=7)
 
 # Topics
 

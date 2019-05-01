@@ -1,5 +1,10 @@
 # Architecture
 
+#### Links:
+- [Video](https://www.youtube.com/watch?v=WTjDXXl8nNc&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=4)
+- [Slides](https://docs.google.com/presentation/d/1DSO94OQoig2PJSDWmhupqDoLVEApFeFX4Az0gkJ88G0/edit#slide=id.g40dd3244bc_0_2)
+- [Homework](#homework)
+
 Each API request typically goes through several phases when being handled. These phases would more or less be:
 
  1. Request data parsing

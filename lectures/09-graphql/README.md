@@ -4,7 +4,7 @@
 ## Links
 
 * [Presentation](https://docs.google.com/presentation/d/1H0dKAiMofkCGX01YjEDJ3KdKePbTNjzGKCC1n67qJQc/edit?usp=sharing)
-* Video - TBD
+* [Video](https://www.youtube.com/watch?v=RNqreGmK3gs&list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP&index=9)
 
 ## Theoretical part
 * Motivation
