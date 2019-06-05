@@ -27,7 +27,7 @@ The course focuses on understanding good architectural practices and project set
 
 #### Branches
 - **Master** branch contains the final solution.
-- **Lecture branches (e.b. 01-javascript)** contain parts of the solution finished after that lecture.
+- **Lecture branches (e.g. 01-javascript)** contain parts of the solution finished after that lecture.
 
 #### Lectures directory
 
