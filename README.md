@@ -74,12 +74,12 @@ Recordings of all sessions can be found on the YouTube playlist below:
 
 
 #### Speakers
-1. Javascript - [Josef Zavisek](https://www.linkedin.com/in/zavisek)
-2. Node.js - [Miroslav Andrysek](https://www.linkedin.com/in/mandrysek/)
-3. Servers - Miroslav Macik
-4. Architecture - [Jiri Erhart](https://www.linkedin.com/in/ji%C5%99%C3%AD-erhart-bb03437b/)
-5. Database - [Samuel Prado](https://www.linkedin.com/in/samuel-prado-80b80121/)
-6. Testing - [David Ruzicka](https://www.linkedin.com/in/davidruzickacz/)
-7. Deployment - [Juan Sanchez](https://www.linkedin.com/in/juan-sanchez-508901b8/)
-8. Workers & Queues and Security - [Jan Hovorka](https://www.linkedin.com/in/honzahovorka/), [Jiri Erhart](https://www.linkedin.com/in/ji%C5%99%C3%AD-erhart-bb03437b/)
-9. GraphQL - [Josef Zavisek](https://www.linkedin.com/in/zavisek)
+1. Javascript - [Josef Zavisek](https://github.com/jzavisek)
+2. Node.js - [Miroslav Andrysek](https://github.com/mandrysek)
+3. Servers - [Miroslav Macik](https://github.com/miryn)
+4. Architecture - [Jiri Erhart](https://github.com/snEk42)
+5. Database - [Samuel Prado](https://github.com/skateonrails)
+6. Testing - [David Ruzicka](https://github.com/ruzicka)
+7. Deployment - [Juan Sanchez](https://github.com/jlsan92)
+8. Workers & Queues and Security - [Jan Hovorka](https://github.com/honzahovorka), [Jiri Erhart](https://github.com/snEk42)
+9. GraphQL - [Josef Zavisek](https://github.com/jzavisek)
