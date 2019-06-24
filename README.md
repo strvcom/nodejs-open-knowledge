@@ -29,8 +29,7 @@ The course focuses on understanding good architectural practices and project set
 
 #### Lectures directory
 
-[Lectures](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures)
-These lectures contain a brief theoretical overview of what was discussed in each given lecture.
+These [Lectures](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures) contain a brief theoretical overview of what was discussed in each given lecture.
 
 You can find the details of all lectures below:
 
