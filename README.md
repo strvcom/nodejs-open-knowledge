@@ -1,40 +1,38 @@
 ## Introduction
 This repository serves as an online course for learning Node.js.
-It’s here to help those who want to learn more about Node.js and backend to develop a backend API.
+Made by STRV, it’s here to help those who want to learn more about Node.js and backend to develop a backend API.
 
 #### Goal
 To give you a fundamental understanding of backend and Node.js.
 
-Presenters in our courses demonstrated the best practices in building Node.js applications based on their experience gained from numerous projects.
+The presenters demonstrated the best practices in building Node.js applications—experience they gained by working on numerous projects.
 
 #### Source
-This repository ("online course") was created and transformed from **STRV Nodejs Nights**–
-a free offline course focused on Node.js created by [STRV](https://www.strv.com/).
+This online course was created by utilizing material from Node.js Nights—the free offline course with a focus on Node.js created by [STRV](https://www.strv.com/).
 
 #### Prerequisites
-The course requires at least a junior-level knowledge of programming (don’t need to be experienced with javascript, Node.js or backend itself).
+This course requires at least junior-level knowledge of programming. (Experience with javascript, Node.js or backend itself is not necessary.)
+
 
 ## Contents
 
-This repository & course contains 9 lectures, with the first 3 lectures being general while the rest 6 sections
-focus on building up one simple project from scratch to demonstrate all the practices.
+This course contains 9 lectures. The first 3 lectures are general, while the other 6 focus on building one simple project from scratch. This allows us to demonstrate the full scope of practices.
+Each lecture contains a video recording of the presentation, with live coding and sample codes.
+The course focuses on understanding good architectural practices and project setups. Please keep in mind that for the purposes of the course, some information and approaches are simplified compared to big production app processes. This allows us to easily demonstrate fundamental patterns.
 
-Each lecture contains a video recording of the presentation with live coding and sample codes.
-
-The course focuses on understanding good architectural practices and project setups. Please keep it mind that for the purpose of the course, it’s simplified compared to big production app to easily demonstrate fundamental patterns.
 
 ## Materials
 
 #### Branches
 - **Master** branch contains the final solution.
-- **Lecture branches (e.g. 01-javascript)** contain parts of the solution finished after that lecture.
+- **Lecture branches (e.g. 01-javascript)** contains the part of the project that is covered in the given lecture.
 
 #### Lectures directory
 
 [Lectures](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures)
-These lectures contain a brief theoretical overview of what was discussed in that lecture.
+These lectures contain a brief theoretical overview of what was discussed in each given lecture.
 
-Here you can find a list of past lessons:
+You can find the details of all lectures below:
 
 1. [Javascript](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/01-javascript)
 2. [Node.js](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/02-nodejs)
@@ -47,7 +45,7 @@ Here you can find a list of past lessons:
 9. [GraphQL](https://github.com/strvcom/nodejs-nights-2018/tree/master/lectures/09-graphql)
 
 #### Video recordings
-Recordings of all sessions can be found in a youtube playlist:
+Recordings of all sessions can be found on the YouTube playlist below:
 
 [https://www.youtube.com/playlist?list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP](https://www.youtube.com/playlist?list=PLfX7tWavkVjBVmmZOU5sWuyutpekJ6KNP)
 
